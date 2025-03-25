@@ -1,0 +1,138 @@
+.testimonials {
+  padding: 50px 0;
+  background: linear-gradient(45deg, #000000, #363636);;
+}
+
+.testimonials h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 4em; /* Font size for the testimonial section heading */
+}
+
+.testimonials-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  text-align: center;
+  
+}
+
+.testimonial-item {
+  padding: 20px;
+  height: 300px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.stars {
+  color: #5eff00;
+  margin-bottom: 10px;
+  font-size: 1.5em; /* Font size for stars */
+}
+
+.author {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.5em; /* Font size for author name */
+}
+
+.testimonial-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensures the content takes full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  color: #ddd;
+}
+
+.testimonial-content:hover {
+  background: #4aff036b; /* Light background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.testimonial-content p {
+  font-style: normal;
+  flex: 1; /* Ensures the text takes remaining space */
+  font-size: 1.3em; /* Font size for testimonial text */
+}
+
+.testimonial-image {
+  max-width: 25%;
+  border-radius: 150px;
+  margin-bottom: 20px;
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.profile-image {
+  width: 50px; /* Profile image size */
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.profile-name {
+  font-size: 1.5em; /* Font size for profile name */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials h1 {
+    font-size: 3em; /* Reduced font size for smaller screens */
+  }
+
+  .testimonials-slider {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .testimonial-content {
+    padding: 15px;
+  }
+
+  .testimonial-profile .profile-image {
+    width: 40px; /* Reduced profile image size for smaller screens */
+    height: 40px;
+  }
+
+  .profile-name {
+    font-size: 1.3em; /* Reduced font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials h1 {
+    font-size: 2.5em; /* Further reduced font size */
+  }
+
+  .testimonial-content {
+    padding: 10px;
+  }
+
+  .testimonial-profile .profile-image {
+    width: 30px; /* Further reduced profile image size */
+    height: 30px;
+  }
+
+  .profile-name {
+    font-size: 1.2em; /* Further reduced font size */
+  }
+}

@@ -1,0 +1,176 @@
+/* Basic navbar styling - starts with transparent background */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent; /* Transparent when page loads */
+    transition: all 0.5s ease; /* Smooth transition for background and other changes */
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out; /* Navbar fades in when the page loads */
+  }
+  
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    background: linear-gradient(45deg, #000000, #363636); /* Gradient on scroll */
+    border-bottom: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow on scroll */
+    animation: fadeIn 0.5s ease-in-out; /* Fades in smoothly when scrolling */
+  }
+  
+  /* Logo styling */
+  .logo img {
+    height: 70px;
+    animation: bounceIn 1s ease-in-out; /* Adds a bounce effect when loading */
+  }
+  
+  /* Nav links for desktop */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: auto;
+    opacity: 0; /* Hidden initially */
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+    animation-delay: 0.5s; /* Slight delay */
+  }
+  
+  .nav-links li {
+    margin: 0 30px; /* Space between nav links */
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white; /* White text for nav links */
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+  }
+
+  /* Hover effect for links */
+  .nav-links li a:hover {
+    color: #a6ff00; /* Hover color effect */
+    transform: scale(1.1); /* Slight scale-up on hover */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Contact button styling */
+  .contact-button .btn1 {
+    background-color: #39FF14; /* Bright color for the contact button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button .btn1:hover {
+    background-color: #39FF14; /* Lighter hover color */
+    transform: scale(1.1); /* Slight scale-up on hover */
+    box-shadow: 0 0 15px 5px rgba(85, 255, 51, 0.8); /* Glow effect */
+}
+
+  
+  /* Responsive nav links */
+  .nav-links-mobile {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(45deg, #000000, #363636);
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    opacity: 0; /* Hidden initially */
+    transform: translateX(-100%); /* Slide out from the left initially */
+    animation: slideIn 0.5s forwards ease-in-out; /* Slide-in animation */
+  }
+  
+  .nav-links-mobile li {
+    padding: 15px 0;
+  }
+  
+  .nav-links-mobile li a {
+    color: white; /* Mobile links color */
+  }
+  
+  /* Mobile menu icon */
+  .mobile-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white; /* White color for icons */
+    transition: transform 0.3s ease; /* Smooth animation for the icon */
+  }
+
+  .mobile-icon:hover {
+    transform: scale(1.2); /* Slight hover effect for the hamburger icon */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .mobile-icon {
+      display: block;
+    }
+  
+    .contact-button {
+      display: none; /* Hide contact button on mobile */
+    }
+
+    /* Toggle mobile nav visibility */
+    .nav-links-mobile {
+      opacity: 1;
+      transform: translateX(0); /* Slide-in effect for mobile links */
+    }
+  }
+
+  /* Keyframe animations */
+
+  /* Fade in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Bounce in effect for logo */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Slide-in effect for mobile nav links */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }

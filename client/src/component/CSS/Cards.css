@@ -1,0 +1,100 @@
+.card {
+  border: 5px solid #54b5e2;
+  border-radius: 20px;
+  margin: 16px;
+  overflow: hidden;
+  width: 400px; /* Increased the width */
+  background: transparent;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 250px; /* Increased the height */
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-title {
+  margin: 0 0 8px;
+  font-weight: bold;
+  color: goldenrod;
+  font-size: 30px;
+}
+
+.card-description {
+  font-size: 18px; /* Increased the font size */
+  margin: 0;
+  color: beige;
+}
+
+.card-social-links {
+  display: flex;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.social-link {
+  margin-right: 15px;
+  font-size: 24px;
+  color: rgb(0, 118, 214);
+  transition: color 0.3s ease-in-out;
+}
+
+.social-link2 {
+  margin-right: 15px;
+  font-size: 24px;
+  color: rgb(224, 13, 119);
+  transition: color 0.3s ease-in-out;
+}
+
+.social-link3 {
+  margin-right: 15px;
+  font-size: 24px;
+  color: rgb(32, 212, 8);
+  transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  color: rgba(0, 118, 214, 0.507);
+}
+
+.social-link2:hover {
+  color: rgba(224, 13, 118, 0.493);
+}
+
+.social-link3:hover {
+  color: rgba(32, 212, 8, 0.486);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    width: 300px; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 250px; /* Adjust width for mobile screens */
+  }
+  
+  .card-image {
+    height: 200px; /* Adjust image height for mobile screens */
+  }
+  
+  .card-title {
+    font-size: 24px; /* Adjust title font size for mobile screens */
+  }
+  
+  .card-description {
+    font-size: 16px; /* Adjust description font size for mobile screens */
+  }
+}

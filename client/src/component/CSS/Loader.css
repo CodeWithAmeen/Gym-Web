@@ -1,0 +1,29 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    background: rgb(255, 255, 255); /* Optional: darkens background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure it's above other content */
+  }
+  
+  .loader-content {
+    text-align: center;
+  }
+  
+  .loader-gif {
+    width: 60%; /* Adjust size as needed */
+     
+  }
+  
+  .loading-text {
+    margin-top: 10px;
+    font-size: 18px; /* Adjust size as needed */
+    color: #4d4d4d; /* Color of the loading text */
+    font-weight: bold;
+  }
+  

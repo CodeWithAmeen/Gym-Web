@@ -1,0 +1,174 @@
+/* Gym Pricing section styling */
+.gym-pricing-section {
+    padding: 50px 20px;
+    background-color: #333;
+    text-align: center;
+  }
+  
+  
+  /* New description under the heading */
+  .pricing-description {
+    font-size: 1.4rem;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+  }
+  
+  /* Gym Pricing cards container */
+  .gym-pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Gym Pricing card styles */
+  .gym-pricing-card {
+    background-image: linear-gradient(45deg, #0e0e0e, #363636);;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 2px solid transparent;
+  }
+  
+  .gym-pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 128, 0, 0.411);
+  }
+  
+  .gym-pricing-card h3 {
+    font-size: 1.8rem;
+    color: #39FF14;
+    margin-bottom: 10px;
+  }
+  
+  .gym-pricing-card .price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .gym-pricing-card .plan-description {
+    font-size: 1.1rem;
+    color: #e9e9e9;
+    margin-bottom: 25px;
+  }
+  
+  .gym-pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+  
+  .gym-pricing-card ul li {
+    font-size: 1.1rem;
+    color: #cecece;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .gym-pricing-card ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .gym-pricing-card .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #111;
+    color: #fafafa;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .gym-pricing-card .btn:hover {
+    background-color: #f8f8f8;
+  }
+  
+ /* Premium card styling */
+.premium {
+    background-color: #ff0000; /* Red background for premium card */
+    color: #ffffff; /* White text for better contrast */
+    border: 2px solid #ff0000; /* Red border to match background */
+    transform: scale(1.05);
+  }
+  
+  .premium h3 {
+    color: #ff0000; /* White color for the heading */
+  }
+  
+  .premium .price {
+    color: #ff0000b9; /* White color for the price */
+  }
+  
+  .premium .plan-description {
+    color: #ffffff; /* White color for the description */
+  }
+  
+  .premium ul li {
+    color: #ffffff; /* White color for list items */
+  }
+  
+
+/* Premium button styles */
+.premium-btn {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #f73100;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.premium-btn:hover {
+  background-color: #ca0000;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px rgba(255, 51, 0, 0.8);
+  color: #fff;
+}
+
+.premium-btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  transform: skewX(45deg);
+  background-color: #e60b0b;
+  z-index: -1;
+  transition: all 1.5s;
+}
+
+.premium-btn:hover::before {
+  width: 80%;
+}
+
+  
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .gym-pricing-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .gym-pricing-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

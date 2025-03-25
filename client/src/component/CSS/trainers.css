@@ -1,0 +1,91 @@
+/* Trainers section styling */
+.trainers-section {
+    padding: 50px 20px;
+    background-color: #111;
+    color: #f0f0f0;
+    text-align: center;
+  }
+
+  
+  /* Trainers container layout */
+  .trainers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Trainer card styling */
+  .trainer-card {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: 280px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .trainer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(57, 255, 20, 0.5);
+  }
+  
+  /* Trainer image container */
+  .trainer-card img {
+    width: 100%;
+    height: 220px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the container properly */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px; /* Adds some spacing around the image */
+    box-sizing: border-box; /* Makes padding work properly with the dimensions */
+  }
+  
+  /* Trainer name */
+  .trainer-card h3 {
+    font-size: 2rem;
+    color: #39FF14;
+    margin-bottom: 10px;
+  }
+  
+  /* Trainer description */
+  .trainer-card p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  /* Social media icons container */
+  .trainer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Social media icons */
+  .trainer-social-links a {
+    color: #39FF14;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .trainer-social-links a:hover {
+    color: #ffffff;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .trainer-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .trainer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
